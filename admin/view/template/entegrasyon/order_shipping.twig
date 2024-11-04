@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html dir="{{ direction }}" lang="{{ lang }}">
+<head>
+    <meta charset="UTF-8" />
+    <title>{{ title }}</title>
+    <base href="{{ base }}" />
+    <link href="view/javascript/bootstrap/css/bootstrap.css" rel="stylesheet" media="all" />
+    <script type="text/javascript" src="view/javascript/jquery/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="view/javascript/bootstrap/js/bootstrap.min.js"></script>
+    <link href="view/javascript/font-awesome/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
+    <link type="text/css" href="view/stylesheet/stylesheet.css" rel="stylesheet" media="all" />
+</head>
+<style>
+    .rcorners2 {
+        border-radius: 25px;
+        border: 1px solid #b1b1b1;
+        padding: 0;
+        width: 100%;
+        margin: 5px;
+    }
+
+</style>
+<body>
+<div style="margin-top: -10px">
+
+    {% if print %}
+    {% else %}
+
+    {% endif %}
+
+    {% for order in orders %}
+        <div style="page-break-after: always; border: 1px solid #d4d2d2; padding: 5px">
+          <center>  <p style="font-size: 14px">  {{ order.marketplace_info.name }} -  {{ order.shipment_method }}</p> </center>
+
+            <center> <img style="margin-top: -10px" src="index.php?route=entegrasyon/order/print_barcode&{{ token_link }}&data={{ order.order_id }}" >
+                <center> <p style="font-size: 10px">{{order.customer_name }}</p></center>
+
+               <center> <p style="font-size: 10px; margin-top: 10px"> {{ order.shipping_address }}</p></center>
+                {% for product in order.product %}
+                    <center><p style="font-size: 10px"> {{ product.quantity }} adet:   {{ product.name }}
+                            {% for option in product.option %}
+                               - {{ option.name }}: {{ option.value }}
+                            {% endfor %}</p></center>
+                {% endfor %}
+
+
+
+        </div>
+    {% endfor %}
+</div>
+</body>
+
+</html>
+
+
+<script>
+    var print2 = '{{ print }}'
+    if (print2){
+        window.print();
+
+    }else{
+
+    }
+
+</script>

@@ -1,0 +1,78 @@
+<div class="panel panel-panel-default">
+    <div class="row well"  style="border-top: 2px solid #27ad5e;">
+
+
+        <div class="col-sm-1">
+            <img class="img-responsive" src="view/image/entegrasyon/bilgi.png"/>
+        </div>
+        <div class="col-sm-11">
+            <h3 style="color:#27ad5e;font-weight: bolder ">Bilgilendirme</h3>
+            <p>Pazarama Api bilgilerinizi almak için https://isortagim.pazarama.com/user/account/integration-information adresinden yönetim panelinize giriş yapın. Sağ üst menüden <strong>kullanıcı bilgilerinin bulunduğu</strong> açılır kutuya tıklayın. Açılan Listeden  <strong>Hesap bilgilerim</strong> seçeneğine tıklayın. Açılan sayfanın üstündeki sekmelerden <strong>Entegrasyon Bilgileri</strong> sekmesine tıklayın.  <strong>Satıcı Id</strong>, <strong>Api Key</strong> <strong>Api Secret</strong> bilgileri görünecektir.. Bu bilgileri Aşağıdaki alanlara girip <strong>Kaydet</strong> Butonuna Tıklayın.</p>
+        </div>
+    </div>
+
+    <div class="panel-heading">
+        <div class="panel-title">Pazarama Api Ayarları</div>
+        <div class="pull-right" style="    margin-top: -7px;">
+            <button  data-toggle="tooltip" title="{{ button_cancel }}" class="btn btn-primary btnVazgec"><i class="fa fa-reply"></i></button></div>
+    </div>
+
+
+</div>
+<div class="row">
+    <div class="container-fluid">
+        <form>
+            <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-meta-title">Pazarama Satıcı Numarası</label>
+                <div class="col-sm-6">
+                    <input type="text" name="pz_satici_numarasi" value="{{
+                    pz_satici_numarasi }}" placeholder="Pazarama Satıcı Numaranızı Giriniz" id="input-meta-api-key" class="form-control" />
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-meta-title">Pazarama Api Anahtarı</label>
+                <div class="col-sm-6">
+                    <input type="text" name="pz_api_anahtari" value="{{
+                    pz_api_anahtari }}" placeholder="Pazarama Api Anahtarızı Giriniz" id="input-meta-api-secret" class="form-control" />
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-meta-title">Pazarama Api Şifresi</label>
+                <div class="col-sm-6">
+                    <input type="text" name="pz_api_sifresi" value="{{
+                    pz_api_sifresi }}" placeholder="Pazarama Api Şifrenizi Giriniz" id="input-meta-api-secret" class="form-control" />
+                </div>
+            </div>
+        </form>
+        <div class="clearfix"></div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-4">
+                <div class="btn-group  ">
+
+                    <button code="pz" name="Pazarama" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Kontrol Ediliyor..." class="btn btn-success btn-lg btnKaydet">Kaydet</button>
+                    <button code="pz" name="Pazarama" class="btn btn-warning btn-lg btnReset" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Yükleniyor..." >Sıfırla</button>
+
+                </div>
+            </div>
+
+        </div>
+    </div></div>
+
+
+<div id="diger" class="well hidden">
+
+    <div class="row">
+
+
+        <p class="lead">Ayarları Başarılıylısa bu ekran açılacak</p>
+
+    </div>
+
+
+</div>
+

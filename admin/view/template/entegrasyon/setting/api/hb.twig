@@ -1,0 +1,77 @@
+<div class="panel panel-panel-default">
+
+    <div class="row well"  style="border-top: 2px solid #27ad5e;">
+
+
+        <div class="col-sm-1">
+            <img class="img-responsive" src="view/image/entegrasyon/bilgi.png"/>
+        </div>
+        <div class="col-sm-11">
+            <h3 style="color:#27ad5e;font-weight: bolder ">Bilgilendirme</h3>
+            <p>Hepsiburada Merchant ID ve Servis Anahtarı bilgilerinizi almak için https://merchant.hepsiburada.com paneline kullanıcı bilgileriniz ile giriş yapınız. Sağ üst köşede yer alana mağaza isminize tıklayıp açılan menüden bilgilerim seçeneğine tıklaynın, Entegrastör menüsünden entegretör bilgileri sayfasını açın. Entegratör ekle butonuna tıklayın, Entegratör arama kısmına "Miryazılım_dev" yazarak geliştirici hesabımızı yetkilendirin, yetkilendirme tamamlandıktan sonra merchant_id ve servis anahtarınız tanımlanacaktır. </p>
+        </div>
+    </div>
+
+    <div class="panel-heading">
+        <div class="panel-title">Hepsiburada Api Ayarları</div>
+        <div class="pull-right" style="    margin-top: -7px;">
+            <button  data-toggle="tooltip" title="{{ button_cancel }}" class="btn btn-primary btnVazgec"><i class="fa fa-reply"></i></button></div>
+    </div>
+
+
+</div>
+
+<div class="row">
+    <div class="container-fluid">
+
+<form>
+        <div class="form-group">
+            <label class="col-sm-2 control-label" for="input-meta-title">Merchant ID</label>
+            <div class="col-sm-6">
+                <input type="text" name="hb_merchant_id" value="{{ hb_merchant_id }}" placeholder="Hepsiburada Merchant ID nizi Giriniz" id="input-meta-api-secret" class="form-control" />
+            </div>
+        </div>
+    <hr>
+
+    <div class="form-group">
+            <label class="col-sm-2 control-label" for="input-meta-title">Servis anahtarı</label>
+            <div class="col-sm-6">
+                <input type="text" name="hb_service_key" value="{{ hb_service_key }}" placeholder="Hepsiburada Servis anahtarı Giriniz" id="input-meta-api-secret" class="form-control" />
+            </div>
+        </div>
+
+
+</form>
+        <div class="clearfix"></div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-4">
+                <div class="btn-group">
+                    <button code="hb" name="Hepsiburada" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Kontrol Ediliyor..." class="btn btn-success btn-lg btnKaydet">Kaydet</button>
+                    <button code="hb" name="Hepsiburada" class="btn btn-warning btn-lg btnReset" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Yükleniyor..." >Sıfırla</button>
+                    
+
+                </div>
+            </div>
+
+        </div>
+    </div></div>
+
+
+
+</div>
+
+
+<script>
+
+
+
+
+
+
+
+
+
+
+</script>
+
